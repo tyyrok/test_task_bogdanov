@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "test-task-bogdanov"
+version = "0.1.0"
+description = ""
+authors = ["Pavel Zubko <tyyrok@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.6"
+pre-commit = "^4.0.1"
+uvicorn = "^0.34.0"
+sqlalchemy = "^2.0.37"
+psycopg2-binary = "^2.9.10"
+pydantic = "^2.10.5"
+alembic = "^1.14.1"
+asyncpg = "^0.30.0"
+celery = "^5.4.0"
+redis = "^5.2.1"
+fastapi-jwt = {extras = ["authlib"], version = "^0.3.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
