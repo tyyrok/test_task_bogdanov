@@ -8,7 +8,7 @@ class ProductBase(BaseModel):
     title: str
     article: str
     price: float
-    ratings: float
+    rating: float
     total_amount: int
 
 
@@ -17,7 +17,7 @@ class ProductCreateDB(ProductBase):
 
 
 class ProductUpdateDB(ProductBase):
-    pass
+    is_subscribed: Optional[bool] = False
 
 
 class ProductResponse(ProductBase):

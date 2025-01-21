@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import DateTime, Integer, DECIMAL, BigInteger, String
+from sqlalchemy import Boolean, BigInteger, DateTime, DECIMAL, Integer, String
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy.sql import func
 
@@ -16,7 +16,7 @@ class Product(Base):
     price: Mapped[float] = mapped_column(DECIMAL)
     rating: Mapped[float]
     total_amount: Mapped[int] = mapped_column(BigInteger, default=0)
-    is_subscribed: Mapped[bool]
+    is_subscribed: Mapped[bool] = mapped_column(Boolean, default=False)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
